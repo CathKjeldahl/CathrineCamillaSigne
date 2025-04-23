@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Interactive Settlement Map</title>
+  <link rel="stylesheet" href="style.css">
+
+  <style>
+    #vand-img{width: 500px !important;
+    height: auto;
+  position: absolute ; 
+  top: 20%; 
+  left: 60%; 
+   }
+
+  #krig-img{
+    width: 300px !important;
+    position: absolute ; 
+  top: 30%; 
+  left: 10%; 
+   }
+  
+   #info1{
+    top: 35%; left: 45%;
+   }
+   #info2{
+    top: 65%; left: 65%;
+   }
+   #krig-knap{
+    top: 30%; left: 40%;
+   }
+   #vand-knap{
+    top: 60%; left: 60%;
+   }
+  </style>
+
+  <script src="script.js" defar></script>
+</head>
+<body>
+    <div class="box-wraper">
+        <div class="tekst-box">
+            <h1>du kan vælge mellem to events:</h1>
+
+            <p>oversvømmelse:<br>
+                vikinger skulle kæmpe med naturen, 
+                lige så meget som andre mennesker.
+                De bo satte sig tit ude ved vandet, da
+                det gjorde det nemmer at handle med
+                andre byer.</p>
+
+            <p>krig:<br>
+                vikinger gik tit i krig, og blev også tit 
+                angrebet af andre, hvor de skulle være 
+                klar til at forsvare sig selv.</p>
+
+                <p>klik på play kanpperne og se hvad 
+                    der sker.</p>
+        </div>
+        <div id="map-container">
+            <img src="image/viking-by.png" id="map-img" alt="Settlement Map">
+          
+            <!-- Overlay Images -->
+            <img src="image/vikinger.png" class="overlay-img" id="krig-img">
+            <img id="vand-img" src="image/oversvømmelse.png" class="overlay-img" >
+          
+            <!-- Buttons -->
+            <button id="krig-knap" class="button"  onclick="showEvent('krig')">play krig</button>
+            <div id="info1" class="info-box" >det er krig</div>
+          
+            <button id="vand-knap" class="button"  onclick="showEvent('vand')">play vand</button>
+            <div id="info2" class="info-box" >det er oversvømmelse</div>
+          </div>
+
+       
+    </div>
+    
+
+</body>
+</html>
